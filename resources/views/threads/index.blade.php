@@ -8,11 +8,16 @@
                     <div class="panel-heading">Forum Threads</div>
 
                     <div class="panel-body">
-                        @foreach($threads as $thread)
+                        @foreach ($threads as $thread)
                             <article>
-                                <h4><a href="{{ $thread->path() }}">{{ $thread->title }}</a></h4>
+                                <h4>
+                                    <a href="{{ $thread->path() }}">
+                                        {{ $thread->title }}
+                                    </a>
+                                </h4>
                                 <div class="body">{{ $thread->body }}</div>
                             </article>
+
                             <hr>
                         @endforeach
                     </div>
